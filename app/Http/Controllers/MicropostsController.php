@@ -24,8 +24,11 @@ public function index()
         // Welcomeビューでそれらを表示
         return view('welcome', $data);
     }
+
+
     
-    public function store(Request $request)
+    
+     public function store(Request $request)
     {
         // バリデーション
         $request->validate([

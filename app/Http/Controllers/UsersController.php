@@ -19,7 +19,8 @@ class UsersController extends Controller
         ]);
     }
     
-public function show($id)
+    
+    public function show($id)
     {
         // idの値でユーザを検索して取得
         $user = User::findOrFail($id);
@@ -36,7 +37,6 @@ public function show($id)
             'microposts' => $microposts,
         ]);
     }
-    
     
     /**
      * ユーザのフォロー一覧ページを表示するアクション。
@@ -61,7 +61,7 @@ public function show($id)
             'users' => $followings,
         ]);
     }
-    
+
     /**
      * ユーザのフォロワー一覧ページを表示するアクション。
      *
